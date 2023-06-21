@@ -41,7 +41,8 @@ h6 {
 ==================*/
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -316,14 +317,16 @@ h6 {
 /* Card
 ==================*/
 .card {
-    margin-top: 80px;
+    margin: 80px -15px 0;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .card__item {
-    width: 380px;
+    width: 33.33333%;
+    padding: 0 15px;
 }
 
 .card__inner {
@@ -350,6 +353,9 @@ h6 {
 
 .card__img img {
     display: block;
+    max-width: 100%;
+    height: auto;
+
     transition: opacity .1s linear;
 }
 
@@ -400,6 +406,7 @@ h6 {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat__item {
@@ -433,14 +440,18 @@ h6 {
 ==================*/
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services__item {
-    flex: 1 1 0;
+    width: 33.3333%;
     position: relative;
+    padding: 0 35px 40px 85px;
+    margin-bottom: 40px;
+}
 
-    padding-left: 85px;
-    padding-right: 35px;
+.services__item--border {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -476,6 +487,8 @@ h6 {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
@@ -490,12 +503,20 @@ h6 {
 ==================*/
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item {
     width: 50%;
+    padding: 0 15px;
 }
 
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 /* Accordion
 ==================*/
@@ -1154,4 +1175,205 @@ h6 {
 
 .copyright span {
     color: #f38181;
+}
+
+
+/* Media
+==================*/
+@media (max-width: 1230px) {
+
+    /* Intro
+    ==================*/
+    .intro__suptitle {
+        font-size: 52px;
+    }
+
+    .intro__title {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 990px) {
+
+    /* Intro
+    ==================*/
+    .intro__suptitle {
+        font-size: 32px;
+    }
+
+    .intro__title {
+        font-size: 80px;
+    }
+
+
+    /* Stat
+    ==================*/
+    .stat {
+        justify-content: center;
+    }
+
+    .stat__item {
+        flex: none;
+        width: 33.3333%;
+        border: 0;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .stat__item:last-child {
+        border-right: 0;
+    }
+
+
+    /* Services
+    ==================*/
+    .services__item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .services__item--border {
+        border: 0;
+    }
+}
+
+@media (max-width: 770px) {
+
+    /* Nav
+    ==================*/
+    .nav {
+        display: none;
+    }
+
+
+    /* Section
+    ==================*/
+    .section {
+        padding: 40px 0;
+    }
+
+    .section--devices {
+        padding-bottom: 0;
+    }
+
+
+    /* Card
+    ==================*/
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+
+    .card__item:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* Slider
+    ==================*/
+    .slider__text {
+        display: none;
+    }
+
+    .slider__item.active::before {
+        width: 40%;
+    }
+
+
+    /* Services
+    ==================*/
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon {
+        left: 0;
+    }
+
+
+    /* Wedo
+    ==================*/
+    .wedo__img{
+        display: none;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    /* Intro
+    ==================*/
+    .intro__suptitle {
+        font-size: 22px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+
+    /* Section
+    ==================*/
+    .section__header {
+        margin-bottom: 50px;
+    }
+
+    .section__suptitle {
+        font-size: 20px;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+
+    .section__title::after {
+        margin: 20px auto;
+    }
+
+
+    /* Stat
+    ==================*/
+    .stat__item {
+        width: 100%;
+        border-bottom: #b5eae0 1px solid;
+    }
+
+    .stat__item:last-child {
+        border-bottom: 0;
+    }
+
+    .stat__count {
+        font-size: 52px;
+    }
+
+
+    /* Devices
+    ==================*/
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
 }
